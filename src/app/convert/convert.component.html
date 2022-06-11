@@ -1,0 +1,69 @@
+<div class="convert">
+  <div class="convert__input">
+    <input
+      class="convert__input_item val"
+      type="text" 
+      [(ngModel)]="valueA"
+      (ngModelChange)="calcB()"
+    >
+
+    <select
+      class="convert__input_item"
+      name="selectC" 
+      [(ngModel)]="currencyA"
+      (ngModelChange)="calcB()"
+      >
+      <option
+        *ngFor="let currency of currencies" 
+        [ngValue]="currency">{{currency.cc}}
+      </option>
+    </select>
+
+    <select
+      class="convert__input_item"
+      name="selectC" 
+      [(ngModel)]="currencyA"
+      (ngModelChange)="calcB()"
+    >
+      <option
+        *ngFor="let currency of currencies" 
+        [ngValue]="currency">{{currency.txt}}
+      </option>
+    </select>
+  </div>
+
+  <img class="convert__arrow" src="../../assets/ca.png" alt="arrow">
+
+  <div class="convert__input">
+    <input 
+      class="convert__input_item val"
+      type="text" 
+      [(ngModel)]="valueB"
+      (ngModelChange)="calcA()"
+    >
+
+    <select
+      class="convert__input_item"
+      name="selectC" 
+      [(ngModel)]="currencyB"
+      (ngModelChange)="calcB()"
+    >
+      <option 
+        *ngFor="let currency of currencies" 
+        [ngValue]="currency">{{currency.cc}}
+      </option>
+    </select>
+
+    <select
+      class="convert__input_item"
+      name="selectC" 
+      [(ngModel)]="currencyB"
+      (ngModelChange)="calcB()"
+    >
+      <option 
+        *ngFor="let currency of currencies" 
+        [ngValue]="currency">{{currency.txt}}
+      </option>
+    </select>
+  </div>
+</div>

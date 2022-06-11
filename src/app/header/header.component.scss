@@ -1,0 +1,29 @@
+.header {
+  width: 100%;
+  background-color: rgb(39, 244, 70);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #000;
+    &__content {
+      width: 80%;
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      &_item {
+        display: flex;
+        gap: 0.4rem;
+        font-size: 1.2rem;
+          &__title {
+              font-weight: 500;
+            }
+            &__val {
+              font-weight: 400;
+            }
+        }
+    }
+}

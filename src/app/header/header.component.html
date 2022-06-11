@@ -1,0 +1,17 @@
+<div class="header">
+  <div class="header__content">
+    <div 
+      *ngIf="usd"
+      (click)="setUsd()" 
+      class="header__content_item"
+    >
+      <span class="header__content_item__title">{{usd.cc}}</span>
+      <span class="header__content_item__val">{{usd.rate}}</span>
+    </div>
+    
+    <div *ngIf="euro" class="header__content_item">
+      <span class="header__content_item__title">{{euro.cc}}</span>
+      <span class="header__content_item__val">{{euro.rate}}</span>
+    </div>
+  </div>
+</div>
